@@ -1,0 +1,40 @@
+Parameters of run:
+    subreddit = c
+    subsample = True
+    subsample_size = 453
+    train_model = True
+    batch_size = 15
+    num_trials = 20
+    perform_pca_bert = False
+    perform_pca_feat = False
+    n_pca_componenents_bert = None
+    n_pca_componenents_feat = None
+    n_eig_view = 20
+    rand_feat = False
+    seed = 42
+_____________________________________________________________
+
+Beginning data loading...
+
+Data loading complete, run time: 0.04 s...
+   data has shape [19479 x 350]
+
+Loading pretrained BERT embeddings...
+
+Pretrained BERT embeddings loaded, run time: 0.05 s...
+   embedding set has shape [19479 x 768]
+
+Beginning feature processing...
+
+Feature processing complete, run time: 0.02 s...
+   features have shape [19479 x 346]
+
+Beginning classification...
+
+Classification results over 20 trials:
+    BERT:        Runtime: 271.62 s    ---    mean accuracy: 0.72, σ: 0.01    ---    mean f1: 0.72, σ: 0.01
+    Features:    Runtime: 337.75 s    ---    mean accuracy: 0.54, σ: 0.01    ---    mean f1: 0.55, σ: 0.01
+
+
+    Results saved at /data/results_10-26-23 16:48:03.png
+

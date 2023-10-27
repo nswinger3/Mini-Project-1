@@ -1,0 +1,68 @@
+Parameters of run:
+    subreddit = mh
+    subsample = True
+    subsample_size = 453
+    train_model = True
+    batch_size = 15
+    num_trials = 20
+    perform_pca_bert = False
+    perform_pca_feat = False
+    n_pca_componenents_bert = None
+    n_pca_componenents_feat = None
+    n_eig_view = 20
+    rand_feat = False
+    seed = 42
+_____________________________________________________________
+
+Beginning data loading...
+
+
+Data loading complete, run time: 136.99 s...
+   data has shape [21291 x 350]
+
+Loading pretrained BERT embeddings...
+
+Embedding save file not found, generating from scratch...
+
+Loading BERT model and tokenizer...
+
+BERT model and tokenizer loaded, run time: 1.56 s...
+
+Tokenizing posts...
+
+
+Tokenization complete, run time: 5.79 s...
+
+Training model...
+
+
+Model training complete, run time: 455.45 s...
+
+
+Evaluating model...
+
+
+Model evaluation complete, run time: 59.65 s...
+   evalution accuracy metric: {'accuracy': 0.699}
+   evaluation f1 metric: {'f1': 0.6994046037822031}
+
+
+Generating embeddings...
+
+BERT embeddings generated, run time: 1257.34 s...
+   embedding set has shape [21291 x 768]
+
+Beginning feature processing...
+
+Feature processing complete, run time: 0.02 s...
+   features have shape [21291 x 346]
+
+Beginning classification...
+
+Classification results over 20 trials:
+    BERT:        Runtime: 479.96 s    ---    mean accuracy: 0.70, σ: 0.01    ---    mean f1: 0.70, σ: 0.01
+    Features:    Runtime: 436.55 s    ---    mean accuracy: 0.53, σ: 0.01    ---    mean f1: 0.53, σ: 0.01
+
+
+    Results saved at /data/results_10-26-23 18:40:24.png
+
